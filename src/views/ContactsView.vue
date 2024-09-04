@@ -35,7 +35,7 @@ export default {
     
 }
 </script>
-<style scoped>
+<style scoped> 
 .contact-head{
     padding: 49px;
     width: 550px;
