@@ -36,6 +36,9 @@ export default {
 }
 </script>
 <style scoped> 
+*{
+  background-color: #cfcfcf;;
+}
 .contact-head{
     padding: 49px;
     width: 550px;
@@ -60,5 +63,14 @@ export default {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+input{
+  background-color: white;
+}
+textarea{
+  background-color: white;
+}
+button{
+  background-color: white;
 }
 </style>
