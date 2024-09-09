@@ -29,6 +29,7 @@ const updateBooksDb = async (bookName , author , amount , quantity , description
 
 const addToCartDb = async(books_id,user_id)=>{
     let [data] = await pool.query('INSERT INTO cart (books_id,user_id) VALUES (?,?)',[books_id,user_id])
+    return data
 }
 
 export {getBooksDb , getBooksIDDb , insertBooksDb , deleteBooksDb , updateBooksDb , addToCartDb} 

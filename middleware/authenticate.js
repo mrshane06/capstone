@@ -1,12 +1,12 @@
 import { compare } from "bcrypt"
-import { getUserIDDb } from "../model/userDb.js"
+import { getProfile } from "../model/userDb.js"
 import joke from "jsonwebtoken"
 import {config} from "dotenv"
 config()
 
 const checkUser = async (req,res,next)=>{
     const {userProfile,userPass} = req.body;
-    let hashedPassword = (await getUserIDDb(userProfile)).userPass
+    let hashedPassword = (await getProfile(userProfile)).userPass
     console.log(hashedPassword);
     let result = await compare(userPass,hashedPassword)
     if(result == true){

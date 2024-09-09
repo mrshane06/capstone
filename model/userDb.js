@@ -5,8 +5,8 @@ const  getUserDb = async () =>{
     return data 
 }
 
-const getUserIDDb = async (userProfile) =>{
-    let [[data]] = await pool.query('SELECT * FROM user WHERE userProfile = ?', [userProfile])
+const getUserIDDb = async (id) =>{
+    let [[data]] = await pool.query('SELECT * FROM user WHERE user_id = ?', [id])
     return data
 }
  
@@ -27,4 +27,9 @@ const updateUserDb = async (firstName , lastName , age , gender , userRole , ema
     await pool.query('UPDATE user SET firstName = ? , lastName = ? , age = ? , gender = ? , userRole = ? , emailAdd = ? , userPass = ? , userProfile = ? WHERE user_id = ?', [firstName , lastName , age , gender , userRole , emailAdd , userPass , userProfile, id])
 }
 
-export {getUserDb , getUserIDDb , insertUserDb , deleteUserDb , updateUserDb } 
+const getProfile = async (userProfile) =>{
+    let [[data]] = await pool.query('SELECT * FROM user WHERE userProfile = ?', [userProfile])
+    return data
+}
+
+export {getUserDb , getUserIDDb , insertUserDb , deleteUserDb , updateUserDb , getProfile } 
