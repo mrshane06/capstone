@@ -1,7 +1,10 @@
 import express from 'express'
-import {getUser , getUserId , insertUser, deleteUser , updateUser } from '../controller/userController.js'
+import {getUser , getUserId , insertUser, deleteUser , updateUser , loginUser } from '../controller/userController.js'
+import { checkUser } from '../middleware/authenticate.js'
 
 const userRouter = express.Router()
+
+userRouter.post('/login', checkUser, loginUser )
 
 userRouter.get('/', getUser)
 
