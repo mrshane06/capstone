@@ -4,9 +4,9 @@
     </div>
     <div id="login">
         <h2 class="book">The Book Nook</h2>
-        <input type="text" placeholder="Username:">
+        <input type="text" placeholder="Username:" required>
         <br><br>
-        <input type="password" placeholder="Password:">
+        <input type="password" placeholder="Password:" required>
         <br><br>
         <button>Submit</button>
         <a href="/signup" id="Create"><p>Don't have an account. Click here:</p></a>
@@ -62,9 +62,45 @@ button{
     margin-bottom:30px ;
 }
 a{
-    padding-bottom:685px ;
     color: rgb(255, 255, 255);
     /* text-decoration: none; */
 }
-    
+@media only screen and (max-width:800px){
+.login{
+    padding: 20px;
+    padding-bottom:20px;
+}
+#login{
+    margin-bottom:10px ;
+}
+}
+@media only screen and (max-width:400px){
+.login{
+    padding: 30px;
+    padding-bottom:34px;
+}
+.book{
+    padding-bottom: 24px;
+    background-color: #2D6A4F;
+    border-radius: 60px;
+}
+}
+@media only screen and (max-width:360px){
+    input{
+        width: 180px;
+    }
+    #login{
+    width: 300px;
+    margin-bottom:7px ;
+    }
+}    
+@media only screen and (max-width:300px){
+    input{
+        width: 160px;
+    }
+    #login{
+    width: 280px;
+    margin-bottom:7px ;
+    }
+}    
 </style>

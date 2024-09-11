@@ -5,10 +5,10 @@
   </section>
   <section id="about-bottom">
     <div class="row">
-          <div class="col-md-4 col-sm-12">
+          <div class="col-md-4 col-sm-6">
             <img src="https://mrshane06.github.io/capstone-images/Pexels/pexels-karlsolano-2883049.jpg" id="img1">
           </div>
-          <div  class="col-md-4 col-sm-12">
+          <div  class="col-md-4 col-sm-6">
             <img src="https://mrshane06.github.io/capstone-images/Pexels/pexels-ekrulila-2203051.jpg" id="img2">
           </div>
           <div  class="col-md-4 col-sm-12">
@@ -63,5 +63,77 @@ export default {
     width: 400px;
     height: 300px;
     padding: 10px;
+  }
+  @media only screen and (max-width:400px){
+  /* about section */
+    #about{
+    background-color: #2D6A4F;
+  }
+  #about-img{
+    width: 275px;
+    height: 137px;
+    margin-right: 0px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  #about-text{
+    position:sticky;
+    display: flex;
+    flex-direction: column;
+    top: 50vw;
+    left: 12vw;
+    font-size: 10px;
+    width: 75vw;
+    color: white;
+    margin-top: 15px;
+    padding-bottom: 15px;
+  }
+  /* bottom half */
+  #about-bottom{
+    background-color: color;
+  }
+  #img1{
+    width: 400px;
+    height: 180px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+  #img2{
+    display: none;
+  }
+  #img3{
+    display: none;
+  }
+  }
+
+  @media only screen and (max-width:360px){
+    #img1{
+    width: 320px;
+    height: 165px;
+    }
+  }
+
+  @media only screen and (max-width:300px){
+    #img1{
+    width: 300px;
+    height: 160px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    }
+    #about-img{
+    width: 275px;
+    height: 137px;
+    margin-right: 0px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  #about-text{
+    top: 50vw;
+    left: 12vw;
+    font-size: 9.3px;
+    width: 75vw;
+    margin-top: 15px;
+    padding-bottom: 15px;
+  }
   }
 </style>

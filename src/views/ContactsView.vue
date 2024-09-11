@@ -1,7 +1,8 @@
 <template>
     <div>
         <div class="contact-head">
-            <h4>Leave us a message if you’d like to request a book , or drop a comment</h4>
+            <!-- <h4>Leave us a message if you’d like to request a book , or drop a comment</h4> -->
+             <h1>Touch me</h1>
         </div>
         <div class="links">
             <p><img src="https://mrshane06.github.io/capstone-images/Icons/gmail_icon.png" id="gmail">niekerkkeegan007@gmail.com</p>
@@ -47,12 +48,12 @@ export default {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 48px;
 }
 #sub{
     width: 70px;
     border-radius: 60px;
-    color: rgb(66, 62, 62);
+    color: rgb(91, 85, 85);
 }
 #gmail{
     width: 20px;
@@ -66,11 +67,20 @@ export default {
 }
 input{
   background-color: white;
+  border:rgb(77, 73, 73) 2px solid;
 }
 textarea{
   background-color: white;
+  border: rgb(77, 73, 73) 2px solid;
 }
 button{
   background-color: white;
+  border: rgb(77, 73, 73) 2px solid;
+}
+@media only screen and (max-width:400px){
+  .contact-head{
+    padding: 49px;
+    width: 400px;
+  }
 }
 </style>

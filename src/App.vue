@@ -17,7 +17,7 @@ import NavbarComp from './components/navbarComp.vue';
 export default{
   components:{
     footerComp,
-    NavbarComp
+    NavbarComp,
   }
 }
 </script>

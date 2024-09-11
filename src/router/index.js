@@ -6,6 +6,8 @@ import ContactsView from '@/views/ContactsView.vue'
 import AdminView from '@/views/AdminView.vue'
 import LoginView from '@/views/LoginView.vue'
 import SignupView from '@/views/SignupView.vue'
+import UsersView from '@/views/UsersView.vue'
+import DeleteUserView from '@/views/deleteUserView.vue'
 
 const routes = [
   {
@@ -50,7 +52,17 @@ const routes = [
     path: '/signup',
     name: 'SignUp',
     component: SignupView
-  }
+  },
+  {
+    path: '/users',
+    name: 'Users',
+    component: UsersView
+  },
+  {
+    path: '/delete',
+    name: 'delete',
+    component: DeleteUserView
+  },
 ]
 
 const router = createRouter({

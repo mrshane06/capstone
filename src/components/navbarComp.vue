@@ -14,9 +14,6 @@
                 <a href="/products">Products</a>
               </li>
               <li>
-                <a href="/cart">Cart</a>
-              </li>
-              <li>
                 <a href="/about">About</a>
               </li>
               <li>
@@ -26,7 +23,10 @@
                 <a href="/admin">Admin</a>
               </li>
               <li>
-                <a href="/login">Login</a>
+                <a href="/cart">Cart <img src="https://mrshane06.github.io/capstone-images/Icons/cart_icon.png" class="cart"></a>
+              </li>
+              <li>
+                <a href="/users"><img src="https://mrshane06.github.io/capstone-images/Icons/person_icon.png" class="cart"></a>
               </li>
             </ul>
           </div>
@@ -39,5 +39,9 @@
         width: 75px;
         height: 75px;
         margin-right: 400px;
+    }
+    .cart{
+      width: 27px;
+      height: 27px;
     }
 </style>

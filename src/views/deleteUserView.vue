@@ -1,15 +1,14 @@
 <template>
     <div class="users">
-        <h2>User Account</h2>
+        <h2>Delete User Account</h2>
     </div>
     <div id="users">
         <h2 class="book">The Book Nook</h2>
-        <input type="text" placeholder="Change Username:" required>
+        <input type="text" placeholder="Username:" required>
         <br><br>
-        <input type="password" placeholder="Change Password:" required>
+        <input type="password" placeholder="Password:" required>
         <br><br>
-        <button>Submit</button>
-        <a href="/delete" id="Create"><p>Want to delete your account. Click here:</p></a>
+        <button>Delete</button>
     </div>
     <div>
     </div>
@@ -26,11 +25,13 @@ export default {
     box-sizing: border-box;
 }
 .users{
+    margin-top: 30px;
     padding: 30px;
     padding-bottom:60px;
 }
 .book{
-    padding-bottom: 60px;
+    margin-top: 20px;
+    padding-bottom: 40px;
     background-color: #2D6A4F;
     border-radius: 60px;
 }
@@ -60,52 +61,18 @@ button{
     width: 380px;
     margin: auto;
     border-radius: 60px;
-    padding: 45px;
-    margin-bottom:18px ;
+    padding: 30px;
+    margin-bottom:65px ;
 }
 a{
     color: rgb(255, 255, 255);
 }
-@media only screen and (max-width:880px){
-.users{
-    padding: 20px;
-    padding-bottom:20px;
-}
-#users{
-    margin-bottom:10px ;
-}
-.book{
-    padding-bottom: 44px;
-}
-}
 @media only screen and (max-width:400px){
     .users{
+    margin-top: 4px;
     padding: 30px;
-    padding-bottom:20px;
-}
-.book{
-    padding-bottom: 37px;
-}
-input{
-    width: 200px;
-}
-}
-@media only screen and (max-width:360px){
-    input{
-        width: 180px;
+    padding-bottom:24px;
     }
-    #users{
-    width: 300px;
-    margin-bottom:18px ;
-    }
-}    
-@media only screen and (max-width:300px){
-    input{
-        width: 160px;
-    }
-    #users{
-    width: 280px;
-    margin-bottom:20px ;
-    }
-} 
+}
+    
 </style>
