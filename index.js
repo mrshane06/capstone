@@ -7,7 +7,7 @@ let port = process.env.PORT || 7070
 const app = express()
 
 app.use(cors({
-    origin: 'https://the-book-nook-72d3c.web.app/',
+    origin: 'https://the-book-nook-72d3c.web.app',
     credentials : true
 }))
 app.use(express.json())
