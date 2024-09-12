@@ -89,16 +89,7 @@ export default {
         text-shadow:3px 3px black;
         padding-top: 18px;
     }
-    h2{
-        color:rgb(213, 208, 208);
-        text-shadow:3px 3px black;
-        padding-top: 18px;
-    }
     button{
-        /* position: sticky;
-        margin-top:250px;
-        margin-left: 20px;
-        margin-right: 20px; */
         border-radius: 10px;
     }
 </style>
