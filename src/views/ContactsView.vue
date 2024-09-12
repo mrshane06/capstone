@@ -1,8 +1,7 @@
 <template>
     <div>
         <div class="contact-head">
-            <!-- <h4>Leave us a message if you’d like to request a book , or drop a comment</h4> -->
-             <h1>Touch me</h1>
+            <h4>Leave us a message if you’d like to request a book , or drop a comment</h4>
         </div>
         <div class="links">
             <p><img src="https://mrshane06.github.io/capstone-images/Icons/gmail_icon.png" id="gmail">niekerkkeegan007@gmail.com</p>

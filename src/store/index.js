@@ -11,21 +11,29 @@ axios.defaults.withCredentials = true
 
 export default createStore({
   state: {
+    users:null,
     user:null,
-    books:null
+    books:null,
+    book:null,
   },
   getters: {
   },
   mutations: {
     setUsers(state, payload){
+      state.users = payload;
+    },
+    setUser(state, payload){
       state.user = payload;
     },
     setBooks(state, payload){
       state.books = payload;
+    },
+    setBook(state, payload){
+      state.book = payload;
     }
   },
   actions: {
-    async getUser({commit}){
+    async getUsers({commit}){
       let data = await fetch('https://capstone-1nf8.onrender.com/user')
       let users = await data.json()
       commit('setUsers', users);
@@ -64,6 +72,11 @@ export default createStore({
       let {data} = await  axios.get('https://capstone-1nf8.onrender.com/books')
       console.log(data);
       commit('setBooks',data)
+    },
+    async getBook({commit},books_id){
+      let {data} = await  axios.get(`https://capstone-1nf8.onrender.com/books/${books_id}`);
+      console.log(data);
+      commit('setBook',data)
     },
     async addToCart({commit},books_id){
       console.log(books_id);

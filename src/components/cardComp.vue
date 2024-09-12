@@ -6,6 +6,9 @@
             <slot name="category"></slot>
             <slot name="author"></slot>
             <slot name="amount"></slot>
+            <slot name="quantity"></slot>
+            <slot name="description"></slot>
+            <slot name="bookURL"></slot>
             <slot></slot>
         </h1>
     </div>

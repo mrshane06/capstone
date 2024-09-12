@@ -8,6 +8,7 @@ import LoginView from '@/views/LoginView.vue'
 import SignupView from '@/views/SignupView.vue'
 import UsersView from '@/views/UsersView.vue'
 import DeleteUserView from '@/views/deleteUserView.vue'
+import SingleView from '@/views/SingleView.vue'
 
 const routes = [
   {
@@ -62,6 +63,11 @@ const routes = [
     path: '/delete',
     name: 'delete',
     component: DeleteUserView
+  },
+  {
+    path: '/single/:id',
+    name: 'singleView',
+    component: SingleView
   },
 ]
 

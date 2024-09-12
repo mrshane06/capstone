@@ -17,11 +17,10 @@
                 <template #amount>
                     <h4>R {{ book.amount }}</h4>
                 </template>
-                
             </card-comp>
             <br><br>
             <button @click="addToCart(books.books_id)">Add to cart</button>
-            <button @click="singleView(books.books_id)">View More</button>
+            <router-link :to="{name:'singleView',params:{id:book.books_id}}"><button>View More</button></router-link>
         </section>
     </div>
     <div v-else>
@@ -47,7 +46,7 @@ export default {
     },
     addToCart(books_id){
         this.$store.dispatch('addToCart',books_id)
-    }
+    },
   },
   mounted(){
     this.getBooks()
@@ -72,7 +71,7 @@ export default {
         grid-template-columns:repeat(3,1fr);
     }
     h4{
-        color:rgb(213, 208, 208);
+        color:rgb(208, 198, 198);
         text-shadow:3px 3px black;
         padding-top: 18px;
     }
@@ -82,6 +81,14 @@ export default {
         padding-top: 18px;
     }
     button{
+        position: sticky;
+        margin-top:250px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+    router-link{
+        z-index: 1000;
         position: sticky;
         margin-top:250px;
         margin-left: 20px;
