@@ -2,13 +2,12 @@
     <div :style="{backgroundImage:`url(${cover})`,backgroundSize:'cover',filter:'blur(4px)'}"></div>
     <div>
         <h1>
-            <slot name="heading"></slot>
-            <slot name="category"></slot>
             <slot name="author"></slot>
+            <slot name="category"></slot>
             <slot name="amount"></slot>
+            <slot name="heading"></slot>
             <slot name="quantity"></slot>
             <slot name="description"></slot>
-            <slot></slot>
         </h1>
     </div>
 </template>

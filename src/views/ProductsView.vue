@@ -2,10 +2,14 @@
     <div>
         <h3>Take a look at what we have in stores:</h3>
     </div>
+    <div class="search-bar">
+        <input type="text" v-model="searchQuery" placeholder="Search products...">
+        <button @click="searchProducts">Search</button>
+    </div>
     <div v-if="books()" id="myBooks" >
         <section v-for="book in books()" :key="book.books_id" >
             <card-comp :cover="book.bookURL">
-                <template #default>
+                <template #heading>
                     <h2>{{ book.bookName }}</h2>
                 </template>
                 <template #author>
@@ -37,6 +41,16 @@ export default {
     cardComp,
     SpinnerComp
   },
+  data() {
+    return {
+      product: [],
+      originalProducts: [], // store original products here
+      searchQuery: '',
+    //   categories: ['mens', 'womens', 'kids'],
+    //   selectedCategory: '',
+    //   sortByPrice: ''
+    }
+  },
   methods:{
     getBooks(){
         this.$store.dispatch('getBooks')
@@ -46,6 +60,12 @@ export default {
     },
     addToCart(books_id){
         this.$store.dispatch('addToCart',books_id)
+    },
+    async searchProducts() {
+      const filteredProducts = this.originalProducts.filter(product => {
+        return product.bookName.toLowerCase().includes(this.searchQuery.toLowerCase())
+      })
+      this.products = filteredProducts
     },
   },
   mounted(){
@@ -64,7 +84,7 @@ export default {
         margin: auto;
         border:solid 2px black;
         border-radius:10%;
-        margin-bottom: 25px;
+        margin-bottom: 40px;
     }
     #myBooks{
         display:grid;
