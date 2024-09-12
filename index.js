@@ -7,8 +7,7 @@ let port = process.env.PORT || 7070
 const app = express()
 
 app.use(cors({
-    // origin: 'http://localhost:8080',
-    origin: 'https://the-book-nook-72d3c.web.app/',
+    origin: 'http://localhost:8080',
     credentials : true
 }))
 app.use(express.json())
