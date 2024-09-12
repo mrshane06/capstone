@@ -1,29 +1,46 @@
 <template>
     <div v-if="book()">
         <div>
-            <h2>SingleView</h2>
+            <h1>uy</h1>
             <a href="/products"></a><button>back</button>
         </div>
         <div v-if="book()">
             {{ $store.state.book.id}}
         </div>
-        <section v-for="single in book()" :key="single.books_id" >
-            <card-comp>
-                <template #default>
-                    <h2>{{ single.bookName }}</h2>
-                </template>
-                <template #author>
-                    <h4>{{ single.author }}</h4>
-                </template>
-                <template #category>
-                    <h4>{{ single.category }}</h4>
-                </template>
-                <template #amount>
-                    <h4>R {{ single.amount }}</h4>
-                </template>
-            </card-comp>
-            <br><br>
-            <button @click="addToCart(single.books_id)">Add to cart</button>
+        <section class="section" id="product">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                    <div class="left-images">
+                        <img :src="book.bookURL" alt="">
+                    </div>
+                    </div>
+                    <div class="col-lg-4">
+                    <div class="right-content">
+                        <h4>{{ book.bookName }}</h4>
+                        <span class="price">${{ book.amount }}</span>
+                        <p>Quantity: {{ book.quantity }}</p>
+                        <p>Category: {{ book.category }}</p>
+                        <div class="quantity-content">
+                        <div class="left-content">
+                            <h6>No. of Orders</h6>
+                        </div>
+                        <div class="right-content">
+                            <div class="quantity buttons_added">
+                            <input type="button" value="-" class="minus" @click="decrementQuantity">
+                            <input type="number" step="1" min="1" max="" name="quantity" v-model="quantity" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                            <input type="button" value="+" class="plus" @click="incrementQuantity">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="total">
+                        <h4>Total: ${{ total }}</h4>
+                        <div class="main-border-button"><a href="#" @click="addToCart">Add To Cart</a></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <div v-else>
@@ -34,11 +51,9 @@
 </template>
 <script>
 import spinnerComp from '@/components/spinnerComp.vue';
-import cardComp from '@/components/cardComp.vue';
 export default {
     components:{
     spinnerComp,
-    cardComp
   },
     methods: {
         getBook(){
@@ -69,10 +84,6 @@ export default {
         border-radius:10%;
         margin-bottom: 25px;
     }
-    #myBooks{
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-    }
     h4{
         color:rgb(208, 198, 198);
         text-shadow:3px 3px black;
@@ -84,10 +95,10 @@ export default {
         padding-top: 18px;
     }
     button{
-        position: sticky;
+        /* position: sticky;
         margin-top:250px;
         margin-left: 20px;
-        margin-right: 20px;
+        margin-right: 20px; */
         border-radius: 10px;
     }
 </style>
