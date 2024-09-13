@@ -1,10 +1,17 @@
 <template>
     <div>
         <h3>Take a look at what we have in stores:</h3>
+        <input type="text" placeholder="Search..." id="mySearch" v-model="searchQuery">
     </div>
-    <div class="search-bar">
+    <!-- <div>
         <input type="text" v-model="searchQuery" placeholder="Search products...">
         <button @click="searchProducts">Search</button>
+    </div> -->
+    <div class="category-filter">
+        <select v-model="selectedCategory">
+            <option value="">All Categories</option>
+            <option v-for="category in categories" :key="category" :value="category">{{ category }}</option>
+        </select>
     </div>
     <div v-if="books()" id="myBooks" >
         <section v-for="book in books()" :key="book.books_id" >
@@ -43,12 +50,10 @@ export default {
   },
   data() {
     return {
-      product: [],
-      originalProducts: [], // store original products here
+      searchProduct: '',
       searchQuery: '',
-    //   categories: ['mens', 'womens', 'kids'],
-    //   selectedCategory: '',
-    //   sortByPrice: ''
+      categories: ['thriller', 'romance', 'fantasy','horror','historical fiction','gothic fiction','kids books'],
+      selectedCategory: '',
     }
   },
   methods:{
@@ -61,12 +66,26 @@ export default {
     addToCart(books_id){
         this.$store.dispatch('addToCart',books_id)
     },
-    async searchProducts() {
-      const filteredProducts = this.originalProducts.filter(product => {
-        return product.bookName.toLowerCase().includes(this.searchQuery.toLowerCase())
-      })
-      this.products = filteredProducts
+
+    async filterByCategory() {
+      if (this.selectedCategory === '') {
+        this.products = this.originalProducts // reset to original products
+      } else {
+        const filteredProducts = this.originalProducts.filter(product => {
+          return product.category === this.selectedCategory
+        })
+        this.products = filteredProducts
+      }
     },
+  },
+  computed:{
+    filterBooms() {
+            return this.$store.state.books.filter(book => {
+            return book.bookName.toLowerCase().includes(this.searchQuery) &&
+                (this.searchProduct === '' || book.category === this.searchProduct)
+            })
+        },
+
   },
   mounted(){
     this.getBooks()
@@ -77,6 +96,9 @@ export default {
     h3{
         padding: 30px;
         text-align: left;
+    }
+    .category-filter{
+        padding: 20px;
     }
     section{
         width:300px;
@@ -114,5 +136,11 @@ export default {
         margin-left: 20px;
         margin-right: 20px;
         border-radius: 10px;
+    }
+    @media only screen and (max-width:400px){
+    #myBooks{
+        display:grid;
+        grid-template-columns:repeat(1,1fr);
+    }
     }
 </style>

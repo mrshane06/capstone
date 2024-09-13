@@ -71,7 +71,7 @@ export default {
   }
   #about-img{
     width: 275px;
-    height: 137px;
+    height: 175px;
     margin-right: 0px;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -93,13 +93,13 @@ export default {
     background-color: color;
   }
   #img1{
-    width: 400px;
-    height: 180px;
-    padding-top: 0px;
-    padding-bottom: 10px;
+    display: none;
   }
   #img2{
-    display: none;
+    width: 350px;
+    height: 200px;
+    padding-top: 0px;
+    padding-bottom: 10px;
   }
   #img3{
     display: none;
@@ -113,7 +113,7 @@ export default {
     }
   }
 
-  @media only screen and (max-width:300px){
+  @media only screen and (max-width:320px){
     #img1{
     width: 300px;
     height: 160px;
@@ -134,6 +134,12 @@ export default {
     width: 75vw;
     margin-top: 15px;
     padding-bottom: 15px;
+  }
+  #img2{
+    width: 300px;
+    height: 200px;
+    padding-top: 0px;
+    padding-bottom: 10px;
   }
   }
 </style>

@@ -71,6 +71,28 @@ a{
     .users{
     margin-top: 4px;
     padding: 30px;
+    }
+    input{
+    width: 200px;
+}
+}
+@media only screen and (max-width:360px){
+    .users{
+    margin-top: 4px;
+    padding: 40px;
+    }
+    #users{
+    width: 300px;
+    margin: auto;
+    border-radius: 60px;
+    padding: 30px;
+    margin-bottom:65px ;
+}
+}
+@media only screen and (max-width:320px){
+    .users{
+    margin-top: 4px;
+    padding: 30px;
     padding-bottom:24px;
     }
 }

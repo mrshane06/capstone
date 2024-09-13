@@ -10,8 +10,8 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-interval="5">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div id="ad-text">
-                <p id="ad-title">Take a look at our gothic fiction genre where we will explore dark, eerie settings and combines horror, romance, and psychological tension to create a mysterious and unsettling atmosphere.</p>
+              <div id="text">
+                <p id="title">Take a look at our gothic fiction genre where we will explore dark, eerie settings and combines horror, romance, and psychological tension to create a mysterious and unsettling atmosphere.</p>
                 <div id="ad-but-1">
                   <a href="/products"><button id="btn"> View More</button></a>
                 </div>
@@ -19,8 +19,8 @@
               <img src="https://mrshane06.github.io/capstone-images/Carousel/GF_slide1.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <div id="ad-text">
-                <p id="ad-title">Take a look at our many Romance novels that focus on the emotional journey of characters falling in love and overcoming obstacles to be together.</p>
+              <div id="text">
+                <p id="title">Take a look at our many Romance novels that focus on the emotional journey of characters falling in love and overcoming obstacles to be together.</p>
                 <div id="ad-but-1">
                   <a href="/products"><button id="btn"> View More</button></a>
                 </div>
@@ -28,8 +28,8 @@
               <img src="https://mrshane06.github.io/capstone-images/Carousel/R_slide2.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <div id="ad-text">
-                <p id="ad-title">Dark fantasy blends magical elements with darker themes, creating a world where fantastical and ominous forces intertwine, often exploring complex, shadowy narratives.</p>
+              <div id="text">
+                <p id="title">Dark fantasy blends magical elements with darker themes, creating a world where fantastical and ominous forces intertwine, often exploring complex, shadowy narratives.</p>
                 <div id="ad-but-1">
                   <a href="/products"><button id="btn"> View More</button></a>
                 </div>
@@ -37,8 +37,8 @@
               <img src="https://mrshane06.github.io/capstone-images/Carousel/F_slide3.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <div id="ad-text">
-                <p id="ad-title">Historical fiction recreates past eras, blending factual events with imaginative storytelling to bring historical periods and figures to life.</p>
+              <div id="text">
+                <p id="title">Historical fiction recreates past eras, blending factual events with imaginative storytelling to bring historical periods and figures to life.</p>
                 <div id="ad-but-1">
                   <a href="/products"><button id="btn"> View More</button></a>
                 </div>
@@ -123,7 +123,7 @@ export default {
     margin-left: 80px;
   }
   /* Carousel */
-  #ad-text{
+  #text{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -131,7 +131,7 @@ export default {
     left: 25vw;
     width: 45vw;
   }
-  #ad-title{
+  #title{
     color: black;
     font-size: 1.3vw;
     margin-left: 7vw;
@@ -170,7 +170,7 @@ export default {
     #mobile-img{
       width: 150px;
       height: 195px;
-      margin-right: 185px;
+      margin-right: 210px;
       margin-top: 15px;
       margin-bottom: 10px;
     }
@@ -187,7 +187,7 @@ export default {
     margin-top: 1.5vw;
     width: 90px;
     height: 30px;
-    top: 75vw;
+    top: 66vw;
     left: 58vw;
     border-radius: 60px;
     color: rgb(255, 255, 255);
@@ -235,7 +235,45 @@ export default {
     display: none;
    }
   }
-  @media only screen and (max-width:300px){
+  @media only screen and (max-width:360px){
+    *{
+      margin: 0;
+    }
+    /* mobile */
+    #btn {
+    margin-top: 1.5vw;
+    width: 90px;
+    height: 30px;
+    top: 73vw;
+    left: 58vw;
+   }
+   .text{
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    .bm{
+    margin-left: 0px;
+    border-radius: 60px;
+    background-color: #D8F3DC;
+    width: 80px;
+    height: 40px;
+    place-content: center;
+    font-size: 15px;
+    margin-left: 120px;
+    }
+    h5{
+    padding-left: 109px;
+  }
+    .h5{
+    padding: 25px;
+    margin-left: 0px;
+    padding-bottom: 60px;
+  }
+  }
+  @media only screen and (max-width:320px){
     *{
       margin: 0;
     }
@@ -248,7 +286,7 @@ export default {
       margin-bottom: 22px;
     }
     #title{
-    font-size: 10px;
+    font-size: 11px;
     top: 45vw;
     left: 45vw;
     width: 50vw;

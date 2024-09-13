@@ -78,7 +78,7 @@ button{
 }
 @media only screen and (max-width:400px){
   .contact-head{
-    padding: 49px;
+    padding: 50px;
     width: 400px;
   }
 }

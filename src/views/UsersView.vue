@@ -80,8 +80,7 @@ a{
 }
 @media only screen and (max-width:400px){
     .users{
-    padding: 30px;
-    padding-bottom:20px;
+    padding: 33px;
 }
 .book{
     padding-bottom: 37px;
@@ -94,9 +93,12 @@ input{
     input{
         width: 180px;
     }
+    .users{
+    padding: 30px;
+}
     #users{
     width: 300px;
-    margin-bottom:18px ;
+    margin-bottom:68px ;
     }
 }    
 @media only screen and (max-width:300px){

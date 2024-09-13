@@ -4,19 +4,35 @@
     </div>
     <div id="login">
         <h2 class="book">The Book Nook</h2>
-        <input type="text" placeholder="Username:" required>
+        <input type="text" v-model="userProfile" placeholder="Username:" required>
         <br><br>
-        <input type="password" placeholder="Password:" required>
+        <input type="password" v-model="userPass" placeholder="Password:" required>
         <br><br>
-        <button>Submit</button>
+        <button @click="loginUser()">Submit</button>
         <a href="/signup" id="Create"><p>Don't have an account. Click here:</p></a>
     </div>
     <div>
     </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
 export default {
-    
+    data() {
+        return {
+            payload:{
+                userProfile:'',
+                userPass:''
+            },
+            signUp : false,
+            login : true 
+        }
+    },
+    methods: {
+        ...mapActions(['insertUser']),
+        async insertUser(){
+            await this.$store.dispatch('insertUser',this.payload);
+        }
+    },
 }
 </script>
 <style scoped>
@@ -40,6 +56,7 @@ input{
     width: 250px;
     border-radius: 60px;
     margin: 10px;
+    text-align: center;
 }
 ::placeholder{
     color: black;
@@ -63,7 +80,6 @@ button{
 }
 a{
     color: rgb(255, 255, 255);
-    /* text-decoration: none; */
 }
 @media only screen and (max-width:800px){
 .login{
@@ -77,12 +93,15 @@ a{
 @media only screen and (max-width:400px){
 .login{
     padding: 30px;
-    padding-bottom:34px;
+    padding-bottom:35px;
 }
 .book{
     padding-bottom: 24px;
     background-color: #2D6A4F;
     border-radius: 60px;
+}
+#login{
+    margin-bottom:36px ;
 }
 }
 @media only screen and (max-width:360px){
@@ -91,7 +110,7 @@ a{
     }
     #login{
     width: 300px;
-    margin-bottom:7px ;
+    margin-bottom:70px ;
     }
 }    
 @media only screen and (max-width:300px){
@@ -100,7 +119,7 @@ a{
     }
     #login{
     width: 280px;
-    margin-bottom:7px ;
+    margin-bottom:0px ;
     }
 }    
 </style>

@@ -64,6 +64,10 @@ li a {
   text-decoration: none;
 }
 
+li :active{
+  color: #2dad77;
+}
+
 @media only screen and (max-width:400px){
   nav{
     width: 100%;

@@ -84,6 +84,8 @@ a{
 .signup{
     padding: 25px;
     padding-left: 0px;
+}
+input{
     text-align: center;
 }
 }

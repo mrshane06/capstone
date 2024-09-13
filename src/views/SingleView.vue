@@ -102,4 +102,11 @@ export default {
     #back{
         margin-bottom: 16px;
     }
+    @media only screen and (max-width:400px){
+    #dis{
+        width: 85vw;
+        margin: auto;
+        text-align: center;
+    }
+    }
 </style>
