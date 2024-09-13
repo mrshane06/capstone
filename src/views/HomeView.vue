@@ -10,8 +10,8 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-interval="5">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div id="text">
-                <p id="title">Take a look at our gothic fiction genre where we will explore dark, eerie settings and combines horror, romance, and psychological tension to create a mysterious and unsettling atmosphere.</p>
+              <div id="ad-text">
+                <p id="ad-title">Take a look at our gothic fiction genre where we will explore dark, eerie settings and combines horror, romance, and psychological tension to create a mysterious and unsettling atmosphere.</p>
                 <div id="ad-but-1">
                   <a href="/products"><button id="btn"> View More</button></a>
                 </div>
@@ -19,8 +19,8 @@
               <img src="https://mrshane06.github.io/capstone-images/Carousel/GF_slide1.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <div id="text">
-                <p id="title">Take a look at our many Romance novels that focus on the emotional journey of characters falling in love and overcoming obstacles to be together.</p>
+              <div id="ad-text">
+                <p id="ad-title">Take a look at our many Romance novels that focus on the emotional journey of characters falling in love and overcoming obstacles to be together.</p>
                 <div id="ad-but-1">
                   <a href="/products"><button id="btn"> View More</button></a>
                 </div>
@@ -28,8 +28,8 @@
               <img src="https://mrshane06.github.io/capstone-images/Carousel/R_slide2.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <div id="text">
-                <p id="title">Dark fantasy blends magical elements with darker themes, creating a world where fantastical and ominous forces intertwine, often exploring complex, shadowy narratives.</p>
+              <div id="ad-text">
+                <p id="ad-title">Dark fantasy blends magical elements with darker themes, creating a world where fantastical and ominous forces intertwine, often exploring complex, shadowy narratives.</p>
                 <div id="ad-but-1">
                   <a href="/products"><button id="btn"> View More</button></a>
                 </div>
@@ -37,8 +37,8 @@
               <img src="https://mrshane06.github.io/capstone-images/Carousel/F_slide3.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <div id="text">
-                <p id="title">Historical fiction recreates past eras, blending factual events with imaginative storytelling to bring historical periods and figures to life.</p>
+              <div id="ad-text">
+                <p id="ad-title">Historical fiction recreates past eras, blending factual events with imaginative storytelling to bring historical periods and figures to life.</p>
                 <div id="ad-but-1">
                   <a href="/products"><button id="btn"> View More</button></a>
                 </div>
@@ -123,7 +123,7 @@ export default {
     margin-left: 80px;
   }
   /* Carousel */
-  #text{
+  #ad-text{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -131,7 +131,7 @@ export default {
     left: 25vw;
     width: 45vw;
   }
-  #title{
+  #ad-title{
     color: black;
     font-size: 1.3vw;
     margin-left: 7vw;
